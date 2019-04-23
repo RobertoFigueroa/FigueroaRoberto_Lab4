@@ -22,6 +22,7 @@ public class Gun : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
+            PlayGunSound();
         }
         
     }
@@ -44,7 +45,10 @@ public class Gun : MonoBehaviour
         }
 
   
-
+    public void PlayGunSound()
+    {
+        transform.GetComponent<AudioSource>().Play();
+    }
  
 
     public float getPoints()
