@@ -8,7 +8,7 @@ public class SampleScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        HideMenu();
     }
 
     // Update is called once per frame
@@ -24,5 +24,13 @@ public class SampleScene : MonoBehaviour
     public void Quit()
     {
         Application.Quit();    }
-
+    public void ShowMenu()
+    {
+        transform.Find("Sound").gameObject.SetActive(true);
+    }
+   
+    public void HideMenu()
+    {
+        transform.Find("Sound").gameObject.SetActive(false);
+    }
 }
